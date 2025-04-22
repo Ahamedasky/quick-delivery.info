@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quick Signup</title>
+  <link rel="stylesheet" href="newsignup.css">
+</head>
+<body>
+  <div class="signup-container">
+    <h2>வணக்கம்!</h2>
+    <h3><u>Account உருவாக்கவும்</u></h3>
+
+    <div class="btn-group">
+      <button class="google-btn" onclick="googleSignup()">Google மூலம்</button>
+    </div>
+<!-- Phone Button -->
+<div class="manual-form" id="phone-signup">
+  <p>அல்லது</p>
+    <input type="tel" id="phoneNumber" placeholder="மொபைல் எண்"  required/>
+  <div id="recaptcha-container" style="margin-top: 10px;"></div>
+   <button class="otp-btn" onclick="sendOTP()">OTP அனுப்பு</button>
+</div>
+
+    
+    <div class="manual-form">
+      <p>அல்லது வழமையான Signup</p>
+      <form onsubmit="return validateSignup(event)">
+        <label for="name">பெயர்</label>
+        <input type="text" id="name" required />
+
+        <label for="email">மின்னஞ்சல்</label>
+        <input type="email" id="email" required />
+
+        <label for="password">கடவுச்சொல்</label>
+        <input type="password" id="password" required />
+
+        <label for="Home address">முகவரி</label>
+        <input type="text" id="Home address" required />
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="newsignup.js"></script>
+  <script type="module" src="firebase-config.js"></script>
+</body>
+</html>
