@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick - பதிவு</title>
+  <link rel="stylesheet" href="signup.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <a href="new signup.html"> <button class="back-btn" onclick="history.back()">←back</button></a>
+    <span class="logo-title">Quick</span>
+  </div>
+
+  <!-- Signup Form -->
+  <div class="signup-container">
+    <h2>தொலைபேசி மூலம் பதிவு</h2>
+    <input type="text" id="phone" placeholder="+91XXXXXXXXXX">
+    <div id="recaptcha-container"></div>
+    <button onclick="phoneSignIn()">OTP அனுப்பவும்</button>
+    <a href="otp-verify.html">ஏற்கனவே OTP பெற்றுவிட்டீர்களா?</a>
+  </div>
+
+  <script src="firebase-config.js"></script>
+  <script src="signup .js"></script>
+</body>
+</html>
